@@ -1,3 +1,5 @@
+/* https://stackoverflow.com/questions/7346929/what-is-the-advantage-of-gccs-builtin-expect-in-if-else-statements/31540623#31540623 */
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
@@ -19,7 +21,6 @@ int main() {
         if (__builtin_expect(!!x[5], 1)) y++;
         if (__builtin_expect( !x[6], 0)) y++;
         if (__builtin_expect(!!x[7], 1)) y++;
-        if (__builtin_expect(!!x[8], 1)) y++;
         y =  2*y*y + 3*y + 5;
     }
     printf("%u\n", y);

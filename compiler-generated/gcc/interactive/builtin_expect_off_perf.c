@@ -1,3 +1,5 @@
+/* https://stackoverflow.com/questions/7346929/what-is-the-advantage-of-gccs-builtin-expect-in-if-else-statements/31540623#31540623 */
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
@@ -19,7 +21,6 @@ int main() {
         if (x[5]) y++;
         if (!x[6]) y++;
         if (x[7]) y++;
-        if (x[8])
         y =  2*y*y + 3*y + 5;
     }
     printf("%u\n", y);
